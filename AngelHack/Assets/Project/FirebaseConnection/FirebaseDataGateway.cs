@@ -46,10 +46,10 @@ public class FirebaseDataGateway : SimpleFirebaseMonobehavior
         app = firebase.Child("app",true);
         goods = app.Child("goods",true);
 
-        onGetOK += (dic,keys) => 
+        onGetOK += (dic,keys) =>
         {
             //要素数が増えた時・・
-            if(dic.Count > prevDataCount)
+            if(dic != null && dic.Count > prevDataCount)
             {
                 //この時のキー(keys)とキャッシュのキーを比べる
                 foreach(var k in keys)
@@ -60,7 +60,10 @@ public class FirebaseDataGateway : SimpleFirebaseMonobehavior
                         //そのキーを加える
                         dataCache.Add(k);
                         //kを使ってdataIDsを参照し、リストと合致するものをInstanciate
-                        
+                        // Dictionary<string,object> temp = dic[k];
+                        // Debug.Log(dic[k]);
+                        RequestValueFromChild(goods,k);
+                        // ProductFaller.InstantiateProductPrefab();
                     }
                 }
             }

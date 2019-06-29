@@ -30,7 +30,7 @@ public class ProductFaller : MonoBehaviour
     }
   }
 
-  void InstantiateProductPrefab(int modalId)
+  public void InstantiateProductPrefab(int modalId)
   {
     GameObject productInstance = Instantiate(
       productPrefabs[modalId],
