@@ -203,6 +203,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1461142096 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3980435735479764429, guid: d85f126f4584e4f2eb40ed7c960376bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 3980435735103117135}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1461142097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461142096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b23e5bac019645abb9c1e04c3e34b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1633263939
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,5 +379,28 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3980435735479764427, guid: d85f126f4584e4f2eb40ed7c960376bd,
+        type: 3}
+      propertyPath: productPrefabs.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3980435735479764427, guid: d85f126f4584e4f2eb40ed7c960376bd,
+        type: 3}
+      propertyPath: productPrefabs.Array.data[2]
+      value: 
+      objectReference: {fileID: 8169157195631194909, guid: c78aeaa18ed534ca18479d9a5260542c,
+        type: 3}
+    - target: {fileID: 3980435735479764427, guid: d85f126f4584e4f2eb40ed7c960376bd,
+        type: 3}
+      propertyPath: productPrefabs.Array.data[3]
+      value: 
+      objectReference: {fileID: 1318174541613981286, guid: c7c11b5a1f8fd41e0a68474d88b32521,
+        type: 3}
+    - target: {fileID: 3980435735479764427, guid: d85f126f4584e4f2eb40ed7c960376bd,
+        type: 3}
+      propertyPath: productPrefabs.Array.data[0]
+      value: 
+      objectReference: {fileID: 7581929606112232300, guid: c667bb4b5dfc443ae87a25cc3a67a5a0,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d85f126f4584e4f2eb40ed7c960376bd, type: 3}
