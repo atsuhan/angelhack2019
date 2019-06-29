@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using SimpleFirebaseUnity;
+using UnityEngine.UI;
 
 public class SimpleFirebaseSample : MonoBehaviour
 {
+
+  [SerializeField] Text uiText;
 
     // Use this for initialization
     void Start()
@@ -25,6 +28,7 @@ public class SimpleFirebaseSample : MonoBehaviour
             foreach (string key in keys)
             {
                 DebugLog(key + " = " + dict[key].ToString());
+                uiText.text = snapshot.RawJson;
             }
     }
 
