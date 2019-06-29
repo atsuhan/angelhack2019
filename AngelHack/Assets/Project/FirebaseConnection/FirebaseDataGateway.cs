@@ -7,10 +7,19 @@ using SimpleFirebaseUnity;
 
 public class FirebaseDataGateway : SimpleFirebaseMonobehavior
 {
-    public List<GoodsItem> parsedItems = new List<GoodsItem>();
     private Firebase firebase;
     private Firebase app;
     private Firebase goods;
+
+    private List<string> dataIDs = new List<string>()
+    {
+        "dfdertaerff",
+        "dhsfiuashfiadksfj",
+        "fafafafd",
+        "kfjaksjfldajflk"
+    };
+    private List<string> dataCache = new List<string>();
+    private int prevDataCount = 0;
 
     void Start()
     {
@@ -39,8 +48,22 @@ public class FirebaseDataGateway : SimpleFirebaseMonobehavior
 
         onGetOK += (dic,keys) => 
         {
-            Debug.Log("ssssssssssss"+dic["dfdertaerff"]);
-            
+            //要素数が増えた時・・
+            if(dic.Count > prevDataCount)
+            {
+                //この時のキー(keys)とキャッシュのキーを比べる
+                foreach(var k in keys)
+                {
+                    //dataCacheがそのキーを含んでいないのであれば・・
+                    if(!dataCache.Contains(k))
+                    {
+                        //そのキーを加える
+                        dataCache.Add(k);
+                        //kを使ってdataIDsを参照し、リストと合致するものをInstanciate
+                        
+                    }
+                }
+            }
         };
     }
 
@@ -57,6 +80,9 @@ public class FirebaseDataGateway : SimpleFirebaseMonobehavior
     {
         while(true)
         {
+            //RequestValueFromChild(goods,"dfdertaerff");
+            //ここで要素数が変わったかどうかをチェックして、変わった時に何が変わったのかを検出する
+            //変わった要素のIDをキャッシュしておいて、それを参照する挙動
             RequestValue(goods);
             yield return new WaitForSeconds(waitTime);
         }

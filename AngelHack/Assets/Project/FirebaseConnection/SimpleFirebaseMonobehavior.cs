@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SimpleFirebaseUnity;
+using MiniJSON;
 
 public abstract class SimpleFirebaseMonobehavior : MonoBehaviour
 {
@@ -15,19 +16,24 @@ public abstract class SimpleFirebaseMonobehavior : MonoBehaviour
         DebugLog("[OK] Get from key: <" + sender.FullKey + ">");
         DebugLog("[OK] Raw Json: " + snapshot.RawJson);
 
+        
+        var json = Json.Deserialize (snapshot.RawJson) as Dictionary<string, object>;
+        
         Dictionary<string, object> dict = snapshot.Value<Dictionary<string, object>>();
         List<string> keys = snapshot.Keys;
+
+
+
         Debug.Log(dict.Count);
         if (keys != null)
             foreach (string key in keys)
             {
                 DebugLog(key + " = " + dict[key].ToString());
-                //Debug.Log("wwwwwwwwwww "+dict.Values.Count);
 
 
                 foreach(var d2 in dict.Values)
                 {
-                    //Debug.Log("fffffffffff ");
+                    Debug.Log("fffffffffff " + d2.ToString());
                     
                 }
             }
