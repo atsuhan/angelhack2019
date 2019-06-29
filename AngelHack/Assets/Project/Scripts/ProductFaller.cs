@@ -23,7 +23,7 @@ public class ProductFaller : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if (Input.GetKeyDown(KeyCode.Space))
+    if (Input.GetKeyDown(KeyCode.Space)|| OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
     {
       int modelId = Random.Range(0, 4);
       InstantiateProductPrefab(modelId);
