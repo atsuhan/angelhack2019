@@ -18,7 +18,6 @@ public class ProductFaller : MonoBehaviour
 
   void Start()
   {
-
   }
 
   // Update is called once per frame
@@ -26,13 +25,14 @@ public class ProductFaller : MonoBehaviour
   {
     if (Input.GetKeyDown(KeyCode.Space))
     {
-      InstantiateProductPrefab(1);
+      int modelId = Random.Range(0, 4);
+      InstantiateProductPrefab(modelId);
     }
   }
 
   void InstantiateProductPrefab(int modalId)
   {
-    Instantiate(
+    GameObject productInstance = Instantiate(
       productPrefabs[modalId],
       GetProductInitRandomPos(),
       Random.rotation,
@@ -43,10 +43,10 @@ public class ProductFaller : MonoBehaviour
   Vector3 GetProductInitRandomPos()
   {
     Vector3 upperPos = upperArea.transform.position;
-    float upperLengthX = upperArea.transform.localScale.x * 10;
-    float upperLengthZ = upperArea.transform.localScale.z * 10;
-    float posX = Random.Range(upperPos.x - (upperLengthX / 2), upperPos.x + (upperLengthX / 2));
-    float posZ = Random.Range(upperPos.z - (upperLengthZ / 2), upperPos.z + (upperLengthZ / 2));
+    float posLengthX = upperArea.transform.localScale.x * 10;
+    float posLengthZ = upperArea.transform.localScale.z * 10;
+    float posX = Random.Range(upperPos.x - (posLengthX / 2), upperPos.x + (posLengthX / 2));
+    float posZ = Random.Range(upperPos.z - (posLengthZ / 2), upperPos.z + (posLengthZ / 2));
     return new Vector3(posX, upperPos.y, posZ);
   }
 }

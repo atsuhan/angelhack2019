@@ -231,7 +231,7 @@ Transform:
   m_GameObject: {fileID: 615961265}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1788695171}
   m_RootOrder: 0
@@ -257,7 +257,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 615961265}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -353,7 +353,7 @@ Transform:
   m_GameObject: {fileID: 1388028858}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 1788695171}
   m_RootOrder: 1
@@ -561,5 +561,5 @@ MonoBehaviour:
   - {fileID: 7497739186245018281, guid: 72c82cdd4b51443e5b15f7053feb5b73, type: 3}
   - {fileID: 7558316151637637805, guid: 40318c518a0e34f3a868cf38ffcab59a, type: 3}
   - {fileID: 278243220066707103, guid: 19c9276a7d5ad4f0890d2069145d7e02, type: 3}
-  - {fileID: -927199367670048503, guid: 65d282677e2364f4b9b4ccf43132b446, type: 3}
-  - {fileID: -927199367670048503, guid: de50c78e2c1c849a989ce74d2fb58715, type: 3}
+  - {fileID: 2663672167267983571, guid: 6cfd92748defd415f8c58d35db9bf5d0, type: 3}
+  - {fileID: 5990843929858108067, guid: 517f323e1622848eabb709a39b155ee3, type: 3}
