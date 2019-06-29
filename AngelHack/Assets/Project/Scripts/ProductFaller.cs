@@ -21,10 +21,14 @@ public class ProductFaller : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
+    if (Input.GetKey(KeyCode.Space))
+    {
+      CreateProductInstance(1);
+    }
   }
 
   void CreateProductInstance(int modalId)
   {
-
+    Instantiate(productPrefabs[modalId], Vector3.zero, Quaternion.identity, upperArea.transform);
   }
 }
