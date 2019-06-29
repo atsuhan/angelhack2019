@@ -11,6 +11,8 @@ public abstract class SimpleFirebaseMonobehavior : MonoBehaviour
     public delegate void OnGetOK(Dictionary<string,object> d, List<string> key);
     public event OnGetOK onGetOK;
 
+    public ProductFaller productFaller;
+
     protected void GetOKHandler(Firebase sender, DataSnapshot snapshot)
     {
         DebugLog("[OK] Get from key: <" + sender.FullKey + ">");
@@ -24,17 +26,20 @@ public abstract class SimpleFirebaseMonobehavior : MonoBehaviour
 
 
 
-        Debug.Log(dict.Count);
+        //Debug.Log(dict.Count);
         if (keys != null)
             foreach (string key in keys)
             {
                 DebugLog(key + " = " + dict[key].ToString());
 
+                if(key == "modelId"){
+                  productFaller.InstantiateProductPrefab(int.Parse(dict[key].ToString()));
+                }
+
 
                 foreach(var d2 in dict.Values)
                 {
                     Debug.Log("fffffffffff " + d2.ToString());
-                    
                 }
             }
         if(onGetOK != null)
