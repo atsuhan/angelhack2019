@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 2315599606732917113}
   - component: {fileID: 3253363816235559060}
   - component: {fileID: 7678413911605930668}
+  - component: {fileID: 8319315199403193149}
   m_Layer: 0
   m_Name: toy_dog_body
   m_TagString: Untagged
@@ -137,7 +138,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2656671261042043673, guid: e7db5e15ef11f439fb48b1b44d5a4e13, type: 3}
+  - {fileID: 2100000, guid: 03e7f88a6dcad4d4492046e60fee391d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -203,6 +204,18 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!114 &8319315199403193149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7231186549542494244}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf2a0a084b6064ca595a0ec8d4548d1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8777821148806745356
 GameObject:
   m_ObjectHideFlags: 0
